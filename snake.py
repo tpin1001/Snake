@@ -19,8 +19,12 @@ class Cube(object):
 
 
 class Snake(object):
+    body = []
+    turns = {}
     def __init__(self, color, pos):
-        pass
+        self.color = color
+        self.head = cub(pos)
+        self.body.append(self.head)
 
     def move(self):
         pass
@@ -67,7 +71,7 @@ def main():
     s = Snake((255,0,0), (10,10))
     flag = True
 
-    clock = pygame.time.clock()
+    clock = pygame.time.Clock()
     while flag:
         pygame.time.delay(50)
         clock.tick(10)
@@ -77,10 +81,5 @@ def main():
 
     pass
 
-rows = 
-w =
-h =
-Cube.rows = rows
-Cube.w = w
 
 main()
